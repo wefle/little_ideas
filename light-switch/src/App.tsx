@@ -158,7 +158,7 @@ function App() {
             </div>
             <div className='creature'>
               <img src='./assets/creatures_eyes.svg' id='creatures_eyes'></img>    
-              <img src='./assets/creature.svg'></img>            
+              <img src='light-switch/src/assets/creature.svg'></img>            
             </div>
             <div className='light_switch'></div>
           </div>
