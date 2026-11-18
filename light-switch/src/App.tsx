@@ -150,7 +150,7 @@ function App() {
           <div className='layer layer__content' id='cave_wall'>
             <div className='creature__operator'>
               <div className='creature__hand'>
-                <img src='./assets/creature_hand.svg'></img>
+                <img src='./src/assets/creature_hand.svg'></img>
               </div>
               <div className='creature__arm'>
                 <img src='./assets/creature_arm.svg'></img>
