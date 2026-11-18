@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Barriecito;
+    src: url(src/fonts/Barriecito-Regular.ttf);
+}
+
+:root {
+  --bg: #121113;
+  --gray-01: #212022;
+  --gray-02: #302F31;
+  --gray-03: #4E4D4E;
+  --accent-01: #211E21;
+  --accent-02: #776C68;
+  --accent-03: #A39B99;
+
+  --text: #CFCBCA;
+
+  --font-heading: "Barriecito", Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--text);
+
+  @media (width >= 768px){
+    font-size: 40px;
+  } 
+}
+

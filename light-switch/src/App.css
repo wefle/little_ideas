@@ -1,0 +1,330 @@
+.main {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .progress_bar {
+    position: absolute;
+    left:0;
+    top: 0;
+    height: 0.5%;
+    background:var(--accent-03);
+  }
+
+  .container {
+    width: 90%;
+    @media (width >= 768px) {
+      width: 60%;
+    }
+  }
+
+  .container__light {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 64.5%;
+
+    .layer {
+      width: 90%;
+      height: 50%;
+      position: absolute;
+      overflow: hidden;
+
+      .creature {
+        width: 6rem;
+        height: 10rem;
+        position: relative;    
+        z-index: 0;
+        transform: translateY(-15%);
+
+        #creatures_eyes {
+          top: 2%;
+          left: 2%
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        @media (width >= 768px) {
+          width: 8rem;
+          height: 12rem;
+          transform: translateY(0);
+        }
+
+        @media (width >= 1024px) {
+          width: 10rem;
+          height: 14rem;
+          transform: translateY(0);
+        }
+      }
+
+      .creature__operator {
+        width: 2rem;
+        height: 14rem;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        translate: 5rem 100%;
+        transform: translate(-1rem, 5rem);
+        rotate: 10deg;
+
+        .creature__arm {
+          width: 2rem;
+          height: 12rem;
+
+          @media (width >= 768px) {
+            width: 3rem;
+            height: 13rem;
+          }
+        }
+
+        .creature__hand {
+          width: 2rem;
+          height: 2rem;
+          rotate: -5deg;
+          position: relative;
+
+          @media (width >= 768px) {
+            width: 3rem;
+            height: 3rem;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+
+        @media (width >= 768px) {
+          transform: translate(1rem, 4.5rem);
+          width: 3rem;
+          height: 16rem;
+        }
+
+        @media (width >= 1024px) {
+          transform: translate(0,0);
+        }
+      }
+      
+      .light_switch {
+        width: 0.2rem;
+        height: 20rem;
+        background: var(--accent-02);
+        position: absolute;
+        translate: 6rem -300%;
+        transform: translate(-2rem, 6rem);
+
+        @media (width >= 768px) {
+          transform: translate(0, 5rem);
+        }
+
+        @media (width >= 1024px) {
+          transform: translate(0,0);
+        }
+      }
+
+      @media (width >= 768px) {
+        width: 60%;
+      }
+    }
+    
+    .layer__curtain {
+      background: var(--bg);
+    }
+
+    .layer__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      border: 2px solid var(--accent-01);
+
+      .image_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          transform: translateY(5%);
+          width: 145%;
+
+          @media (width >= 425px) {
+            width: 120%;
+            transform: translateY(10%);
+          }
+
+          @media (width >= 768px) {
+            width: 100%;
+            transform: translateY(10%);
+          }
+
+          @media (width >= 1024px) {
+            width: 100%;
+            transform: translateY(15%);
+          }
+        }
+      }
+    }
+
+    #cave_wall {
+      background: var(--bg);
+    }
+  }
+
+  .container__switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 35%;
+
+    .crank {
+      width: 18rem;
+      height: 18rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .crank__base {
+        width: 8rem;
+        height: 8rem;
+        background: var(--gray-03);
+        border-radius: 100%;
+
+        @media (width >= 768px) {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+
+      .crank__handle {
+        width: 10rem;
+        height: 2rem;
+        background: var(--accent-03);
+        border-radius: 2rem;
+        align-self: flex-end;
+        position: absolute;
+
+        @media (width >= 768px) {
+          width: 11rem;
+          height: 2.5rem;
+        }
+      }
+
+      .crank__skrew {
+        width: 0.75rem;
+        height: 1.25rem;
+        background: var(--gray-01);
+        border-radius: 100%;
+        position: absolute;
+
+        @media (width >= 768px) {
+          width: 1rem;
+          height: 1.5rem;
+        }
+      }
+
+      .crank__knob {
+        width: 3rem;
+        height: 3rem;
+        background: var(--gray-03);
+        border-radius: 100%;
+        position: absolute;
+        align-self: flex-end;
+        border: none;
+
+        &:hover, &:focus{
+          cursor: grab;
+        }
+
+        &:active{
+          cursor: grabbing;
+        }
+
+        @media (width >= 768px) {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+
+      @media (width >= 768px) {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+  }
+
+  .loading_screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background: var(--bg);
+  }
+}
+
+@keyframes grabbing_light_switch {
+  0% {translate: 5rem 100%;}
+  50% {translate: 5rem 0;}
+  100% {translate: 5rem 100%;}
+}
+
+@keyframes light_switch_drop {
+  0%   { translate: 6rem -300%; animation-timing-function: cubic-bezier(.5, 0, 1, .55);} 
+  30%  { translate: 6rem -15rem;; animation-timing-function: cubic-bezier(.2, .7, .4, 1);} 
+  40%  { translate: 6rem -12.5rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);} 
+  52%  { translate: 6rem -16rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  63%  { translate: 6rem -12.8rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  74%  { translate: 6rem -16.2rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  100% { translate: 6rem -15rem;}
+}
+
+@keyframes light_switch_move {
+  0%   { translate: 6rem -15rem;}
+  50%  { translate: 6rem -7.5rem; animation-timing-function: cubic-bezier(.5, 0, 1, .55);} 
+  60%  { translate: 6rem -16.5rem; animation-timing-function: cubic-bezier(.2, .7, .4, 1);} 
+  70%  { translate: 6rem -15rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);} 
+  82%  { translate: 6rem -14rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  94%  { translate: 6rem -15.6rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  100% { translate: 6rem -15rem; }
+}
+
+@keyframes light_switch_off {
+  0% {opacity: 0;}
+  50% {opacity: 0.2;}
+  100% {opacity: 1;}
+}
+
+@keyframes load_page {
+  from {opacity: 1;}
+  to {opacity: 0;}  
+}
+
+@keyframes light_flickering {
+  0%, 100% { opacity: 1; }
+  10% { opacity: 0.2; }
+  20% { opacity: 0.7; }
+  30% { opacity: 0.1; }
+  60% { opacity: 0.9; }
+  70% { opacity: 0.2; }
+  80% { opacity: 1; }
+}
+
+@keyframes watch {
+  0%   {left: 2%; top: 2%}
+  10%  {left: 0%; top: 2%}
+  20%, 30%, 40%, 50% {left: 0%; top: 0%;}
+  60%, 70%, 80%  {left: 2%; top: -2%}
+  90%, 100% {left: 0%; top: 0%}
+}
