@@ -75,7 +75,6 @@ function App() {
         setPercentage(Math.floor((angle*100)/(6.283185*MAX_ROTATION)));
         setProgress(Math.floor((totalPercentage+percentage)/(100*MAX_ROTATION)*100));
         progressBar.style.width = progress + "%";
-        console.log(progress)
         if(layer < curtains.length) {
           curtains[curtains.length-1-layer].style.animation = "light_flickering 1s linear 2s";
           curtains[curtains.length-1-layer].style.opacity = `${1 - percentage/100}`;
@@ -84,7 +83,6 @@ function App() {
 
         if(percentage >= 100){
           setTotalPercentage(totalPercentage+percentage);
-          console.log("hello")
           setPercentage(0);
           setCount(0);
           setOldAngle(0);
