@@ -150,39 +150,39 @@ function App() {
           <div className='layer layer__content' id='cave_wall'>
             <div className='creature__operator'>
               <div className='creature__hand'>
-                <img src='./src/assets/creature_hand.svg'></img>
+                <img src='.../assets/creature_hand.svg'></img>
               </div>
               <div className='creature__arm'>
-                <img src='./assets/creature_arm.svg'></img>
+                <img src='.../assets/creature_arm.svg'></img>
               </div>
             </div>
             <div className='creature'>
-              <img src='./assets/creatures_eyes.svg' id='creatures_eyes'></img>    
-              <img src='light-switch/src/assets/creature.svg'></img>            
+              <img src='../assets/creatures_eyes.svg' id='creatures_eyes'></img>    
+              <img src='.../assets/creature.svg'></img>            
             </div>
             <div className='light_switch'></div>
           </div>
           <div className='layer layer__content'>
             <div className='image_container'>
-              <img src='./assets/layer4.svg'></img>
+              <img src='../assets/layer4.svg'></img>
             </div>  
           </div>
           <div className='layer layer__curtain'></div>
           <div className='layer layer__content'>
             <div className='image_container'>
-              <img src='./assets/layer3.svg'></img>
+              <img src='../assets/layer3.svg'></img>
             </div>  
           </div>
           <div className='layer layer__curtain'></div>
           <div className='layer layer__content'>
             <div className='image_container'>
-              <img src='./assets/layer2.svg'></img>
+              <img src='../assets/layer2.svg'></img>
             </div>  
           </div>
           <div className='layer layer__curtain'></div>
           <div className='layer layer__content'>
             <div className='image_container'>
-              <img src='./assets/layer1.svg'></img>
+              <img src='../assets/layer1.svg'></img>
             </div>            
           </div>
           <div className='layer layer__curtain'></div>
