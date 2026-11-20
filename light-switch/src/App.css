@@ -39,7 +39,7 @@
         height: 10rem;
         position: relative;    
         z-index: 0;
-        transform: translateY(-15%);
+        transform: translateY(-10%);
 
         #creatures_eyes {
           top: 2%;
@@ -73,8 +73,7 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        translate: 5rem 100%;
-        transform: translate(-1rem, 5rem);
+        translate: calc(5rem) 100%;
         rotate: 10deg;
 
         .creature__arm {
@@ -104,13 +103,8 @@
         }
 
         @media (width >= 768px) {
-          transform: translate(1rem, 4.5rem);
           width: 3rem;
           height: 16rem;
-        }
-
-        @media (width >= 1024px) {
-          transform: translate(0,0);
         }
       }
       
@@ -119,16 +113,8 @@
         height: 20rem;
         background: var(--accent-02);
         position: absolute;
-        translate: 6rem -300%;
-        transform: translate(-2rem, 6rem);
-
-        @media (width >= 768px) {
-          transform: translate(0, 5rem);
-        }
-
-        @media (width >= 1024px) {
-          transform: translate(0,0);
-        }
+        top:0;
+        translate: calc(6rem) -300%;
       }
 
       @media (width >= 768px) {
@@ -275,29 +261,29 @@
 }
 
 @keyframes grabbing_light_switch {
-  0% {translate: 5rem 100%;}
-  50% {translate: 5rem 0;}
-  100% {translate: 5rem 100%;}
+  0% {translate: calc(5rem) 100%;}
+  50% {translate: calc(5rem) calc(2rem);}
+  100% {translate: calc(5rem) 100%;}
 }
 
 @keyframes light_switch_drop {
-  0%   { translate: 6rem -300%; animation-timing-function: cubic-bezier(.5, 0, 1, .55);} 
-  30%  { translate: 6rem -15rem;; animation-timing-function: cubic-bezier(.2, .7, .4, 1);} 
-  40%  { translate: 6rem -12.5rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);} 
-  52%  { translate: 6rem -16rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
-  63%  { translate: 6rem -12.8rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
-  74%  { translate: 6rem -16.2rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
-  100% { translate: 6rem -15rem;}
+  30%  { translate: calc(6rem) calc(-5rem); animation-timing-function: cubic-bezier(.2, .7, .4, 1);} 
+  40%  { translate: calc(6rem) calc(-3.5rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);} 
+  52%  { translate: calc(6rem) calc(-4.5rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  63%  { translate: calc(6rem) calc(-2.5rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  74%  { translate: calc(6rem) calc(-6.2rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  100% { translate: calc(6rem) calc(-5rem);}
+  0%   { translate: calc(6rem) -300%; animation-timing-function: cubic-bezier(.5, 0, 1, .55);} 
 }
 
 @keyframes light_switch_move {
-  0%   { translate: 6rem -15rem;}
-  50%  { translate: 6rem -7.5rem; animation-timing-function: cubic-bezier(.5, 0, 1, .55);} 
-  60%  { translate: 6rem -16.5rem; animation-timing-function: cubic-bezier(.2, .7, .4, 1);} 
-  70%  { translate: 6rem -15rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);} 
-  82%  { translate: 6rem -14rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
-  94%  { translate: 6rem -15.6rem; animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
-  100% { translate: 6rem -15rem; }
+  0%   { translate: calc(6rem) calc(-5rem);}
+  50%  { translate: calc(6rem) calc(0); animation-timing-function: cubic-bezier(.5, 0, 1, .55);} 
+  60%  { translate: calc(6rem) calc(-6.5rem); animation-timing-function: cubic-bezier(.2, .7, .4, 1);} 
+  70%  { translate: calc(6rem) calc(-5rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);} 
+  82%  { translate: calc(6rem) calc(-4rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  94%  { translate: calc(6rem) calc(-5.6rem); animation-timing-function: cubic-bezier(.37, 0, .63, 1);}
+  100% { translate: calc(6rem) calc(-5rem);}
 }
 
 @keyframes light_switch_off {
